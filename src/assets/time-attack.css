@@ -1,0 +1,270 @@
+/* GENERAL */
+
+body {
+    background: #10111f;
+    color: #eeeeff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.time-attack-page {
+    min-height: 100vh;
+    padding: 30px;
+    background:
+        radial-gradient(ellipse at top left, #292052 0%, transparent 45%),
+        radial-gradient(ellipse at bottom right, #142b50 0%, transparent 45%),
+        #10111f;
+}
+
+/* TITULOS */
+
+.time-attack-page h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: white;
+    text-shadow: 0 0 20px #8b5cf6;
+}
+
+.time-attack-page h2 {
+    color: #c4b5fd;
+    font-weight: 700;
+}
+
+.time-attack-page .lead {
+    color: #a5a5c7;
+}
+
+/* PANEL DEL JUEGO */
+
+.game-panel {
+    background: rgba(30, 31, 55, 0.85);
+    border: 1px solid #45406e;
+    border-radius: 20px;
+    padding: 40px 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.12);
+}
+
+/* BOTONES */
+
+.time-attack-page .btn-primary {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.time-attack-page .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.5);
+}
+
+.time-attack-page .btn-danger {
+    border-radius: 8px;
+}
+
+/* INPUT */
+
+.time-attack-page .form-control {
+    background: #202139;
+    border: 1px solid #555078;
+    color: white;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.time-attack-page .form-control:focus {
+    background: #202139;
+    color: white;
+    border-color: #a78bfa;
+    box-shadow: 0 0 10px rgba(167, 139, 250, 0.4);
+}
+
+/* TECLADO */
+
+.time-attack-page .keypad button {
+    background: #292747;
+    color: white;
+    border: 2px solid #7160b5;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px;
+    margin: 8px;
+    min-width: 65px;
+    transition: 0.2s;
+}
+
+.time-attack-page .keypad button:hover:not(:disabled) {
+    background: #8b5cf6;
+    box-shadow: 0 0 20px #8b5cf6;
+    transform: scale(1.08);
+}
+
+.time-attack-page .keypad button:disabled {
+    opacity: 0.35;
+}
+
+/* TABLAS */
+
+.time-attack-page .table {
+    color: #eeeeff;
+    --bs-table-bg: transparent;
+    --bs-table-color: #eeeeff;
+    --bs-table-striped-bg: rgba(139, 92, 246, 0.08);
+    --bs-table-striped-color: #eeeeff;
+    border-color: #45406e;
+}
+
+.time-attack-page .table thead {
+    background: #292747;
+    color: #c4b5fd;
+}
+
+/* HISTORIAL */
+
+.scoreboard-card {
+    background: rgba(30, 31, 55, 0.95);
+    border: 1px solid #45406e;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.12);
+}
+
+.scoreboard-card .card-header {
+    background: linear-gradient(135deg, #51418d, #373477);
+    color: white;
+    border: none;
+    padding: 18px;
+}
+
+.scoreboard-card .card-body {
+    background: transparent;
+}
+
+.scoreboard-card h4 {
+    color: white;
+}
+
+.scoreboard-card .alert-info {
+    background: #292747;
+    color: #c4b5fd;
+    border: 1px solid #51418d;
+}
+
+/* BIENVENIDA */
+
+.welcome-panel {
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 45px;
+    background: rgba(30, 31, 55, 0.95);
+    border: 1px solid #51418d;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.2);
+}
+
+/* RESULTADOS */
+
+.time-attack-page .table td,
+.time-attack-page .table th {
+    vertical-align: middle;
+}
+
+/* MOVILES */
+
+@media (max-width: 768px) {
+    .time-attack-page {
+        padding: 15px;
+    }
+
+    .time-attack-page h1 {
+        font-size: 2.3rem;
+    }
+
+    .game-panel {
+        padding: 20px 10px;
+    }
+
+    .welcome-panel {
+        margin: 40px auto;
+        padding: 25px;
+    }
+}
+
+/* ANIMACIONES DE LAS TECLAS */
+
+.time-attack-page .keypad button {
+    transition: all 0.25s ease;
+    animation: aparecer 0.5s ease backwards;
+}
+
+/* Colores diferentes para cada tecla */
+
+.time-attack-page .keypad button:nth-child(1) {
+    background: #e74c3c;
+    border-color: #ff796c;
+    color: white;
+    animation-delay: 0.1s;
+}
+
+.time-attack-page .keypad button:nth-child(2) {
+    background: #3498db;
+    border-color: #74c6ff;
+    color: white;
+    animation-delay: 0.2s;
+}
+
+.time-attack-page .keypad button:nth-child(3) {
+    background: #27ae60;
+    border-color: #65e69a;
+    color: white;
+    animation-delay: 0.3s;
+}
+
+.time-attack-page .keypad button:nth-child(4) {
+    background: #9b59b6;
+    border-color: #d49af0;
+    color: white;
+    animation-delay: 0.4s;
+}
+
+/* Efecto al pasar el ratón */
+
+.time-attack-page .keypad button:hover:not(:disabled) {
+    transform: translateY(-7px) scale(1.12);
+    filter: brightness(1.3);
+    box-shadow: 0 0 20px currentColor;
+}
+
+/* Efecto al pulsar */
+
+.time-attack-page .keypad button:active:not(:disabled) {
+    transform: scale(0.9);
+}
+
+/* Teclas ya pulsadas */
+
+.time-attack-page .keypad button:disabled {
+    opacity: 0.3;
+    filter: grayscale(1);
+    transform: scale(0.9);
+}
+
+/* Animación de entrada */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
